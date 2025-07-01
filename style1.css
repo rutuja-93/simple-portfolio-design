@@ -1,0 +1,246 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --bg-color: #e5e5e5;
+    --text-color: #3d3d3d;
+    --theme-btn-bg: #fff;
+    --primary-color: #fbd144;
+    --common-padding: 0 12vw;
+    font-size: 16px;
+  }
+  
+  :root.dark {
+    --bg-color: #0c151d;
+    --text-color: #f1f2f4;
+    --theme-btn-bg: #171f26;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  main {
+    height: 100vh;
+  }
+  
+  .theme {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .theme div {
+    background-color: var(--theme-btn-bg);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: scale 0.2s ease-in-out;
+  }
+  
+  .hide#sun,
+  .hide#moon {
+    display: none;
+  }
+  
+  .theme div:hover {
+    scale: 1.1;
+  }
+  
+  .self-intro {
+    padding: var(--common-padding);
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .self-intro .img-container {
+    width: 25rem;
+    height: 25rem;
+    border: 0.3rem solid var(--primary-color);
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+  
+  .self-intro .img-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  .self-intro .personal-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .personal-info p:first-child {
+    font-size: 4rem;
+    /* font-weight: 700; */
+  }
+  
+  .personal-info p:nth-child(2) {
+    font-size: 1.5rem;
+    /* font-weight: 700; */
+  }
+  .personal-info ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  
+  .personal-info ul li a {
+    color: var(--text-color);
+    font-size: 2rem;
+  }
+  
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+  
+  .contact a {
+    padding: 1rem 2rem;
+    background-color: var(--theme-btn-bg);
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  
+  .contact a:first-child {
+    background-color: var(--primary-color);
+    color: #0c151d;
+  }
+  
+  @media (max-width: 768px) {
+    :root {
+      font-size: 14px;
+    }
+    .skill-Info {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+    }
+    .skill-Info a {
+      width: 100%;
+      align-items: center;
+    }
+    .personal-info p:first-child {
+      font-size: 3rem;
+    }
+  }
+  /* Default (light theme) */
+/* Default Light Theme */
+.skill-Info {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+  padding: 5px;
+  border-radius: 12px;
+  width: 500px;
+  height: 50px;
+  margin: auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.skill-Info a {
+  padding: 1rem 5rem;
+  background-color: white; /* default for inactive tab */
+  border-radius: 0.5rem;
+  color: black;
+  text-decoration: none;
+}
+
+.skill-Info a:first-child {  /* Portfolio tab */
+  background-color:gray;
+  color: white;
+}
+
+/* Dark Theme */
+:root.dark .skill-Info {
+  background-color:var(--theme-btn-bg); /* gray background */
+}
+
+:root.dark .skill-Info a {
+  background-color:var(--theme-btn-bg); /* Skills tab = same as background */
+  color: white;
+}
+
+:root.dark .skill-Info a:first-child {
+  background-color: black;  /* Portfolio tab stays black */
+  color: white;
+}
+
+
+  
+@media (max-width: 768px) {
+    :root {
+      font-size: 14px;
+    }
+  
+    .skill-Info {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+  
+    .skill-Info a {
+      width: 80%;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      display: block;
+    }
+  
+    .skill-Info a.active {
+      font-size: 1.3rem;
+    }
+  }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-top: 40px;
+    background-color: var(--bg-color);
+    max-width: 700px;
+    margin: auto;
+}
+
+.portfolio-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  filter: grayscale(100%) brightness(1.2) contrast(0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+h3 {
+  text-align: center;
+  padding-top: 40px;
+
+}
+
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My porfolio</title>
+    <link rel="stylesheet" href="style1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="theme">
+        <div onclick="toggleTheme()">
+          <i class="fa-solid fa-moon" id="moon"></i>
+          <i class="fa-solid fa-sun hide" id="sun"></i>
+        </div>
+      </div>
+      <div class="self-intro">
+        <div class="img-container">
+          <img src="myimg.jpg" alt="rutuja image" />
+        </div>
+        <div class="personal-info">
+          <p>Rutuja Zaware</p>
+          <p>Full Stack developer</p>
+          <ul class="social-links">
+            <li>
+              <a href="https://github.com/rutuja-93">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="contact">
+        <a href="Resume1.pdf" download>
+          Download CV
+          <i class="fa-solid fa-download"></i>
+        </a>
+        <a href="rutujazaware87@gmail.com">
+          Contact me
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+      </div>
+      <div class="skill-Info">
+        <a href="selfintro.html" class="active">Portfolio</a>
+
+        <a href="skills.html">Skills</a>
+      </div>
+      <div class="portfolio-grid">
+        <img src="img1.png" alt="Project 1" />
+        <img src="img2.png" alt="Project 2" />
+        <img src="img3.jpg" alt="Project 3" />
+        <img src="img4 (2).jpg" alt="Project 4" />
+        <img src="img5.png" alt="Project 5" />
+        <img src="img6.png" alt="Project 6" />
+      </div>
+      <h3>© Victor Alvarado. 2022 All rigths reserved</h3>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
